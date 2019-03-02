@@ -1,0 +1,222 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<hr />
+			<h1>
+				关于{{name}}号移动应用程序的安全隐私分析报告
+			</h1>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="hero-unit">
+
+				<p>
+					&nbsp;
+				</p>
+                <p contenteditable="true">我们将移动应用程序的安全隐私问题细分为如下五个问题：</p>
+
+			</div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							安全问题
+						</th>
+						<th>
+							描述
+						</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="info">
+						<td>
+							系统问题
+						</td>
+						<td>
+							对系统造成负面影响的问题，例如未经授权开始下载，卸载不完全等问题。
+						</td>
+
+					</tr>
+					<tr class="success">
+						<td>
+							安全隐私
+						</td>
+						<td>
+							有关未经授权访问用户信息，例如窃取电话号码，账户信息等问题。
+						</td>
+
+					</tr>
+					<tr class="error">
+						<td>
+							垃圾广告
+						</td>
+						<td>
+							关于应用程序在程序中或通知栏中投放垃圾广告的问题。
+						</td>
+
+					</tr>
+					<tr class="warning">
+						<td>
+							恶意扣费
+						</td>
+						<td>
+							关于应用程序未经用户允许，在其不知情情况下扣费的问题。
+						</td>
+
+					</tr>
+					<tr class="info">
+						<td>
+							病毒木马
+						</td>
+						<td>
+							应用程序包含病毒木马，对用户产生不良影响。
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+            <p>
+					&nbsp;
+				</p>
+                <p contenteditable="true">在对小米商城中该app下所有评论进行分析后，我们对该app的五类安全问题得出以下评分：</p>
+                <p>
+					&nbsp;
+				</p>
+			<h3>
+				<span class="badge" contenteditable="true">1</span>  系统问题：{{score0}}级
+                <hr />
+			</h3>
+            <p contenteditable="true">
+                {% if score0 and score0 == 'A'%}
+                    没有用户反映存在系统问题，该app存在系统问题的风险较低。
+                {% elif score0 and score0 == 'B'%}
+                    有较少用户反映存在系统问题，该app可能存在系统问题的风险，请您谨慎下载。
+                {% elif score0 and score0 == 'C'%}
+                    有部分用户反映存在系统问题，该app存在系统问题的风险较大，请您谨慎下载。
+                {% elif score0 and score0 == 'D'%}
+                    大量用户反映存在系统问题，该app很可能存在系统问题，对您的手机系统安全造成影响，不建议您下载。
+                {% endif %}</p>
+            <h3>
+				<span class="badge" contenteditable="true">2</span>  隐私泄露：{{score1}}级
+                <hr />
+			</h3>
+            <p contenteditable="true">
+                {% if score1 and score1 == 'A'%}
+                    没有用户反映存在个人信息泄露问题，该app存在系统问题的风险较低。
+                {% elif score1 and score1 == 'B'%}
+                    有较少用户反映存在个人信息泄露问题，该app可能存在盗取个人隐私的风险，请您谨慎下载。
+                {% elif score1 and score1 == 'C'%}
+                    有部分用户反映存在个人信息泄露问题，该app存在盗取个人隐私的风险较大，不建议您下载。
+                {% elif score1 and score1 == 'D'%}
+                    大量用户反映存在个人信息泄露问题，该app很可能存在盗取个人隐私的问题，对您的隐私安全造成影响，不建议您下载。
+                {% endif %}</p>
+            <h3>
+				<span class="badge" contenteditable="true">3</span>  垃圾广告：{{score2}}级
+                <hr />
+			</h3>
+            <p contenteditable="true">
+                {% if score2 and score2 == 'A'%}
+                    没有用户反映存在垃圾广告问题，该app存在垃圾广告问题的风险较低。
+                {% elif score2 and score2 == 'B'%}
+                    有较少用户反映存在垃圾广告问题，该app可能会推送广告，请您谨慎下载。
+                {% elif score2 and score2 == 'C'%}
+                    有部分用户反映存在垃圾广告问题，该app推送广告的风险较大，请您谨慎下载。
+                {% elif score2 and score2 == 'D'%}
+                    大量用户反映存在垃圾广告问题，该app很可能存在大量垃圾广告，对您造成影响，不建议您下载。
+                {% endif %}</p>
+            <h3>
+				<span class="badge" contenteditable="true">4</span>  恶意扣费：{{score3}}级
+                <hr />
+			</h3>
+            <p contenteditable="true">
+                {% if score3 and score3 == 'A'%}
+                    没有用户反映存在恶意扣费问题，该app存在恶意扣费问题的风险较低。
+                {% elif score3 and score3 == 'B'%}
+                    有较少用户反映存在恶意扣费问题，该app可能存在恶意扣费的风险，请您谨慎下载。
+                {% elif score3 and score3 == 'C'%}
+                    有部分用户反映存在恶意扣费问题，该app存在恶意扣费的风险较大，不建议您下载。
+                {% elif score3 and score3 == 'D'%}
+                    大量用户反映存在恶意扣费问题，该app很可能存在恶意扣费问题，对您的财产安全造成影响，不建议您下载。
+                {% endif %}</p>
+            <h3>
+				<span class="badge" contenteditable="true">5</span>  病毒木马：{{score4}}级
+                <hr />
+			</h3>
+            <p contenteditable="true">
+                {% if score4 and score4 == 'A'%}
+                    没有用户反映存在病毒木马问题，该app存在病毒木马问题的风险较低。
+                {% elif score4 and score4 == 'B'%}
+                    有较少用户反映存在病毒木马，该app可能存在病毒木马的风险，请您谨慎下载。
+                {% elif score4 and score4 == 'C'%}
+                    有部分用户反映存在病毒木马，该app存在病毒木马的风险较大，不建议您下载。
+                {% elif score4 and score4 == 'D'%}
+                    大量用户反映存在病毒木马问题，该app很可能存在病毒木马问题，对您的手机安全造成较大影响，不建议您下载。
+                {% endif %}</p>
+            <p>
+					&nbsp;
+				</p>
+            <p contenteditable="true">我们的评级标准如下表：</p>
+            <p>
+					&nbsp;
+				</p>
+						<table class="table">
+				<thead>
+					<tr>
+						<th>
+							等级
+						</th>
+						<th>
+							评价标准
+						</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="info">
+						<td>
+							A
+						</td>
+						<td>
+							在该应用程序中未发现存在该问题的评论。
+						</td>
+
+					</tr>
+					<tr class="success">
+						<td>
+							B
+						</td>
+						<td>
+							在该应用程序中发现存在该问题的评论，且评论数量在0%-5%之间。
+						</td>
+
+					</tr>
+					<tr class="error">
+						<td>
+							C
+						</td>
+						<td>
+							在该应用程序中发现存在该问题的评论，且评论数量在5%-10%之间。
+						</td>
+
+					</tr>
+					<tr class="warning">
+						<td>
+							D
+						</td>
+						<td>
+							在该应用程序中发现存在该问题的评论，且评论数量在10%以上。
+						</td>
+
+					</tr>
+
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+</div>
+{% endblock %}
