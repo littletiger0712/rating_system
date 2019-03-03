@@ -20,3 +20,4 @@
 
 7.系统实现：利用flask框架构造web应用实现安全评级系统。系统原理为：输入app id，从小米应用商店获取所有用户评论。对每一条差评进行预测，根据出现问题的比例形成安全评级。
 
+![img](https://github.com/littletiger0712/rating_system/blob/master/bishe_flask/%E5%9B%BE%E7%89%871.png)
